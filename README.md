@@ -2,7 +2,7 @@
 
 Welcome to Tic Tac Toe! This is a simple command-line based game where two players take turns marking spaces on a nxn grid (3x3 by default). The goal is to get three of your marks in a row, either horizontally, vertically, or diagonally.
 
-## How to Play
+## Launch
 
 1. Clone this repository to your local machine.
 
@@ -14,13 +14,19 @@ Welcome to Tic Tac Toe! This is a simple command-line based game where two playe
 
 5. Install the required dependencies by running the command `pip install -r requirements.txt`.
 
-6. Write your commands in the moves.txt file. Write only commands and nothing more.
+6. Write your commands in the `moves.txt` file. Write only commands and nothing more.
 
 7. Run the command `python main.py moves.txt` to play the game.
 
-The `python main.py --show-board moves.txt` command plays you the game with printed board.
+    The `python main.py --show-board moves.txt` command plays you the game with printed board.
 
 8. You can run tests with the command `python -m unittest discover -s tests`.
 
 9. To check linters and formatting, you can use pre-commit. Run `pre-commit install` to set it up, and then run `pre-commit run --all-files` to check all files.
+
+If you prefer to develop in Docker:
+
+1. Build the Docker image by running the command `docker build -t tictactoe .`.
+
+2. Run the Docker container by executing the command `docker run tictactoe`.
 
