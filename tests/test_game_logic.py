@@ -1,6 +1,6 @@
 import unittest
 from game_logic import TicTacToe
-from exceptions import InvalidMoveError, InvalidPlayerError
+from exceptions import InvalidMoveError
 
 class TestTicTacToe(unittest.TestCase):
 

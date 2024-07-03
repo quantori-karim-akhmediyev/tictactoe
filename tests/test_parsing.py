@@ -1,5 +1,5 @@
 import unittest
-from unittest.mock import mock_open, patch, MagicMock
+from unittest.mock import mock_open, patch
 from main import parse_arguments, process_file, parse_move, execute_moves
 from exceptions import InvalidCommandError, InvalidCoordinatesError, InvalidFileError
 from game_logic import TicTacToe

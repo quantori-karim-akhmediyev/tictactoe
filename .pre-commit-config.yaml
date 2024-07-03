@@ -1,0 +1,17 @@
+repos:
+  - repo: https://github.com/PyCQA/isort
+    rev: 5.13.2
+    hooks:
+      - id: isort
+        name: isort (Python imports organizer)
+        stages: [manual]
+
+  - repo: local
+    hooks:
+      - id: ruff
+        name: Ruff
+        entry: ruff check
+        language: system
+        types:
+          - python
+        files: \.py$
