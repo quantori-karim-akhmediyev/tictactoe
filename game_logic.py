@@ -13,9 +13,9 @@ class TicTacToe:
     def __init__(self, board_size=3):
         self.board_size = board_size
         self.board = [[0 for _ in range(self.board_size)] for _ in range(self.board_size)]
-        self.current_player = 1 # X starts
         self.winner = None
         self.is_draw = False
+        self.__current_player = 1 # X starts
 
 
     def __check_rows(self):
@@ -60,11 +60,11 @@ class TicTacToe:
         if self.board[x-1][y-1] != 0:
             raise InvalidMoveError("Position already occupied.")
 
-        if self.current_player != (1 if player == 'X' else -1):
+        if self.__current_player != (1 if player == 'X' else -1):
             raise InvalidPlayerError("Not your turn.")
 
-        self.board[x-1][y-1] = self.current_player
-        self.current_player *= -1  # Toggle player
+        self.board[x-1][y-1] = self.__current_player
+        self.__current_player *= -1  # Toggle player
 
         self.winner = self.__check_winner()
         self.__check_draw()
