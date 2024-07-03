@@ -1,32 +1,115 @@
 # Tic Tac Toe
 
-Welcome to Tic Tac Toe! This is a simple command-line based game where two players take turns marking spaces on a nxn grid (3x3 by default). The goal is to get three of your marks in a row, either horizontally, vertically, or diagonally.
+Welcome to Tic Tac Toe! Enjoy this simple, classic game right from your command line. This implementation supports a nxn grid, with a default setting of 3x3. The objective is to align three of your marks in a row, column, or diagonally.
 
-## Launch
+## Getting Started
 
-1. Clone this repository to your local machine.
+### Prerequisites
 
-2. Open a terminal and navigate to the project directory.
+- Python 3.6 or higher
+- pip (Python package installer)
 
-3. Set up a virtual environment by running the command `python -m venv venv`.
+### Installation
 
-4. Activate the virtual environment by running the command `source venv/bin/activate` (for Unix-based systems) or `venv\Scripts\activate` (for Windows).
+1. **Clone the Repository**
 
-5. Install the required dependencies by running the command `pip install -r requirements.txt`.
+   Clone this repository to your local machine:
 
-6. Write your commands in the `moves.txt` file. Write only commands and nothing more.
+   ```bash
+   git clone https://github.com/your-repository/tictactoe.git
+   cd tictactoe
+   ```
 
-7. Run the command `python main.py moves.txt` to play the game.
+2. **Set Up a Virtual Environment**
 
-    The `python main.py --show-board moves.txt` command plays you the game with printed board.
+   Create and activate a virtual environment:
 
-8. You can run tests with the command `python -m unittest discover -s tests`.
+   - **Unix-based systems:**
 
-9. To check linters and formatting, you can use pre-commit. Run `pre-commit install` to set it up, and then run `pre-commit run --all-files` to check all files.
+     ```bash
+     python -m venv venv
+     source venv/bin/activate
+     ```
 
-If you prefer to develop in Docker:
+   - **Windows:**
 
-1. Build the Docker image by running the command `docker build -t tictactoe .`.
+     ```bash
+     python -m venv venv
+     .\venv\Scripts\activate
+     ```
 
-2. Run the Docker container by executing the command `docker run tictactoe`.
+3. **Install Dependencies**
 
+   Install all the required dependencies:
+
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+### Usage
+
+1. **Prepare Your Moves**
+
+   Write your game moves in the `moves.txt` file, formatted as described in the documentation.
+
+2. **Run the Game**
+
+   Execute the game using:
+
+   ```bash
+   python main.py moves.txt
+   ```
+
+   To view the game board after each move, use the `--show-board` option:
+
+   ```bash
+   python main.py --show-board moves.txt
+   ```
+
+### Testing
+
+Run automated tests to ensure the game operates correctly:
+
+```bash
+python -m unittest discover -s tests
+```
+
+### Code Quality
+
+To maintain code quality and style consistency, use the pre-commit hooks:
+
+1. **Install pre-commit hooks:**
+
+   ```bash
+   pre-commit install
+   ```
+
+2. **Run pre-commit on all files:**
+
+   ```bash
+   pre-commit run --all-files
+   ```
+
+### Docker Support
+
+If you prefer using Docker:
+
+1. **Build the Docker Image**
+
+   ```bash
+   docker build -t tictactoe .
+   ```
+
+2. **Run the Docker Container**
+
+   ```bash
+   docker run tictactoe
+   ```
+
+## Contributing
+
+Contributions are welcome! Please read our [CONTRIBUTING.md](CONTRIBUTING.md) for details on our code of conduct and the process for submitting pull requests.
+
+## License
+
+Distributed under the MIT License. See [LICENSE](LICENSE) for more information.
