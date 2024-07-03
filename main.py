@@ -1,6 +1,8 @@
 import argparse
 import sys
-from exceptions import InvalidCommandError, InvalidCoordinatesError, InvalidFileError
+
+from exceptions import (InvalidCommandError, InvalidCoordinatesError,
+                        InvalidFileError)
 from game_logic import TicTacToe
 
 PLAYER_X = "X"

@@ -1,8 +1,10 @@
 import unittest
 from unittest.mock import mock_open, patch
-from main import parse_arguments, process_file, parse_move, execute_moves
-from exceptions import InvalidCommandError, InvalidCoordinatesError, InvalidFileError
+
+from exceptions import (InvalidCommandError, InvalidCoordinatesError,
+                        InvalidFileError)
 from game_logic import TicTacToe
+from main import execute_moves, parse_arguments, parse_move, process_file
 
 
 class TestMain(unittest.TestCase):

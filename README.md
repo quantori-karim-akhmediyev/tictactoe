@@ -8,10 +8,19 @@ Welcome to Tic Tac Toe! This is a simple command-line based game where two playe
 
 2. Open a terminal and navigate to the project directory.
 
-3. Write your commands in the moves.txt file. Write only commands and nothing more
+3. Set up a virtual environment by running the command `python -m venv venv`.
 
-3. Run the command `python main.py moves.txt` to play the game.
+4. Activate the virtual environment by running the command `source venv/bin/activate` (for Unix-based systems) or `venv\Scripts\activate` (for Windows).
 
-The `python main.py --show-board moves.txt` command plays you the game with printed board
+5. Install the required dependencies by running the command `pip install -r requirements.txt`.
 
-4. You can run tests with `python -m unittest discover -s tests` command
+6. Write your commands in the moves.txt file. Write only commands and nothing more.
+
+7. Run the command `python main.py moves.txt` to play the game.
+
+The `python main.py --show-board moves.txt` command plays you the game with printed board.
+
+8. You can run tests with the command `python -m unittest discover -s tests`.
+
+9. To check linters and formatting, you can use pre-commit. Run `pre-commit install` to set it up, and then run `pre-commit run --all-files` to check all files.
+

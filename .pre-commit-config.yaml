@@ -1,10 +1,13 @@
 repos:
-  - repo: https://github.com/PyCQA/isort
-    rev: 5.13.2
+  - repo: local
     hooks:
       - id: isort
         name: isort (Python imports organizer)
-        stages: [manual]
+        entry: isort
+        language: system
+        types:
+          - python
+        files: \.py$
 
   - repo: local
     hooks:
