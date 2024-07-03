@@ -39,8 +39,10 @@ def parse_move(line):
     coordinates = parts[2].split(',')
     if len(coordinates) != 2:
         raise InvalidCoordinatesError("Invalid coordinates format")
-
     x, y = map(int, coordinates)
+    if x <= 0 or x > BOARD_SIZE or y <= 0 or y > BOARD_SIZE:
+        raise InvalidCoordinatesError("Invalid coordinates")
+
     return player, x, y
 
 
