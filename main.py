@@ -3,8 +3,6 @@ import sys
 from exceptions import InvalidCommandError, InvalidCoordinatesError, InvalidFileError, InvalidPlayerError
 from game_logic import TicTacToe
 
-
-# Constants for easy modification and readability
 PLAYER_X = "X"
 PLAYER_O = "O"
 VALID_PLAYERS = {PLAYER_X, PLAYER_O}
