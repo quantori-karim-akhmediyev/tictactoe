@@ -1,0 +1,9 @@
+player X 1,1
+player O 1,2
+player X 2,2
+player O 3,3
+player X 3,2
+player O 3,1
+player X 2,3
+player O 2,1
+player X 1,3
